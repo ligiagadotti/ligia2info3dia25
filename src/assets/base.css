@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 10% auto 10%;
+  grid-template-areas: 
+    "header header"
+    "sidenav content"
+    "footer footer";
+}
+
+#header, #content, #sidenav, #footer {
+  border: 1px solid green;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#header {
+  grid-area: header;
+  background-color: rgb(219, 251, 251);
+}
+#content {
+  grid-area: content;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(219, 251, 251);
+}
+#footer {
+  grid-area: footer;
+  background-color: rgb(219, 251, 251);
+}
+#sidenav {
+  grid-area: sidenav;
+  background-color: rgb(219, 251, 251);
+}
+
+.block {
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgb(14, 14, 109);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px;
+  background-color: rgb(203, 218, 250);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
