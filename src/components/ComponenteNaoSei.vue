@@ -1,5 +1,25 @@
 <script>
-export default {};
+export default {
+    props: {
+        titulo: {
+            default: "Titulo Padrão",
+        },
+        nomes: {
+            type: Array
+        },
+    },
+};
 </script>
-<template><article id="article" class="block">Eu amo acotar</article></template>
-<style></style>
+<template>
+    <article class="block">
+        {{ titulo }}
+        <hr />
+        <ul>
+            <li v-for="(nome, i) of nomes" :key="i">
+                {{ nome }}
+            </li>
+        </ul>
+    </article>
+</template>
+<style>
+</style>
